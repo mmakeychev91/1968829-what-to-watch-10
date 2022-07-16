@@ -1,26 +1,19 @@
 import MainScreen from '../../pages/mainScreen/mainScreen';
 
-type AppScreenProps = {
-  filmCardAmountPerStep: number;
+export type FilmCard = {
   filmName: string;
   filmGenre: string;
   filmReliseDate: number;
 };
 
-function App({
-  filmCardAmountPerStep,
-  filmName,
-  filmGenre,
-  filmReliseDate,
-}: AppScreenProps): JSX.Element {
-  return (
-    <MainScreen
-      filmCardAmountPerStep={filmCardAmountPerStep}
-      filmName={filmName}
-      filmGenre={filmGenre}
-      filmReliseDate={filmReliseDate}
-    />
-  );
-}
+const mockedFilmCard: FilmCard = {
+  filmName: 'The Grand Budapest Hotel',
+  filmGenre: 'Drama',
+  filmReliseDate: 2014,
+};
+
+const App = (): JSX.Element => (
+  <MainScreen filmCard={mockedFilmCard}/>
+);
 
 export default App;
