@@ -1,9 +1,17 @@
-const Player = (): JSX.Element => (
+import { FilmInformation } from '../../types/filmInformation';
+
+type Props = {
+  films: FilmInformation[];
+};
+
+const Player = ({
+  films
+}: Props): JSX.Element => (
   <div className="player">
     <video
-      src="#"
+      src={films[0].video}
       className="player__video"
-      poster="img/player-poster.jpg"
+      poster={films[0].bigPoster}
     >
     </video>
 
@@ -34,7 +42,7 @@ const Player = (): JSX.Element => (
           </svg>
           <span>Play</span>
         </button>
-        <div className="player__name">Transpotting</div>
+        <div className="player__name">{films[0].filmName}</div>
 
         <button type="button" className="player__full-screen">
           <svg viewBox="0 0 27 27" width="27" height="27">

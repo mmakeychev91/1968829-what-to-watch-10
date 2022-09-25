@@ -1,83 +1,53 @@
-import SmallFilmCard from '../../components/smallFilmCard/smallFilmCard';
-import { v4 as uuidv4 } from 'uuid';
-import { ITEMS_PER_PAGE } from '../../const';
-import { FilmCard } from '../../components/app/app';
+import { FilmInformation } from '../../types/filmInformation';
+import { RenderingFilmQuantity } from '../../types/renderingFilmQuantity';
+import FilmList from '../../components/filmList/filmList';
+import UserBlock from '../../components/userBlock/userBlock';
+import PlayButton from '../../components/playButton/playButton';
+import Footer from '../../components/footer/footer';
+import Logo from '../../components/logo/logo';
 
 type Props = {
-  filmCard: FilmCard;
+  films: FilmInformation[],
+  renderingFilmQuantity: RenderingFilmQuantity[];
 };
 
-const renderFilmCards = (filmCardAmountPerStep: number) => {
-  const filmCardsItems = [];
-  for (let i = 0; i < filmCardAmountPerStep; i++) {
-    filmCardsItems.push(<SmallFilmCard key={uuidv4()} />);
-  }
-  return filmCardsItems;
-};
-
-const MainScreen = ({ filmCard }: Props): JSX.Element => (
+const MainScreen = ({
+  films,
+  renderingFilmQuantity
+}: Props): JSX.Element => (
   <>
     <section className="film-card">
       <div className="film-card__bg">
-        <img
-          src="img/bg-the-grand-budapest-hotel.jpg"
-          alt="The Grand Budapest Hotel"
-        />
+        <img src={films[1].bigPoster} alt={films[1].filmName} />
       </div>
 
       <h1 className="visually-hidden">WTW</h1>
 
       <header className="page-header film-card__head">
-        <div className="logo">
-          <a className="logo__link">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </a>
-        </div>
-
-        <ul className="user-block">
-          <li className="user-block__item">
-            <div className="user-block__avatar">
-              <img
-                src="img/avatar.jpg"
-                alt="User avatar"
-                width="63"
-                height="63"
-              />
-            </div>
-          </li>
-          <li className="user-block__item">
-            <a className="user-block__link">Sign out</a>
-          </li>
-        </ul>
+        <Logo isLink={false} isLinkLight={false} />
+        <UserBlock />
       </header>
 
       <div className="film-card__wrap">
         <div className="film-card__info">
           <div className="film-card__poster">
             <img
-              src="img/the-grand-budapest-hotel-poster.jpg"
-              alt="The Grand Budapest Hotel poster"
+              src={films[1].MovieСover}
+              alt={films[1].filmName}
               width="218"
               height="327"
             />
           </div>
 
           <div className="film-card__desc">
-            <h2 className="film-card__title">{filmCard.filmName}</h2>
+            <h2 className="film-card__title">{films[1].filmName}</h2>
             <p className="film-card__meta">
-              <span className="film-card__genre">{filmCard.filmGenre}</span>
-              <span className="film-card__year">{filmCard.filmReliseDate}</span>
+              <span className="film-card__genre">{films[1].genre}</span>
+              <span className="film-card__year">{films[1].releaseDate}</span>
             </p>
 
             <div className="film-card__buttons">
-              <button className="btn btn--play film-card__button" type="button">
-                <svg viewBox="0 0 19 19" width="19" height="19">
-                  <use xlinkHref="#play-s"></use>
-                </svg>
-                <span>Play</span>
-              </button>
+              <PlayButton/>
               <button className="btn btn--list film-card__button" type="button">
                 <svg viewBox="0 0 19 20" width="19" height="20">
                   <use xlinkHref="#add"></use>
@@ -147,9 +117,10 @@ const MainScreen = ({ filmCard }: Props): JSX.Element => (
           </li>
         </ul>
 
-        <div className="catalog__films-list">
-          {renderFilmCards(ITEMS_PER_PAGE)}
-        </div>
+        <FilmList
+          films={films}
+          renderingFilmQuantity={renderingFilmQuantity[0].itemsPer}
+        />
 
         <div className="catalog__more">
           <button className="catalog__button" type="button">
@@ -157,20 +128,7 @@ const MainScreen = ({ filmCard }: Props): JSX.Element => (
           </button>
         </div>
       </section>
-
-      <footer className="page-footer">
-        <div className="logo">
-          <a className="logo__link logo__link--light">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </a>
-        </div>
-
-        <div className="copyright">
-          <p>© 2019 What to watch Ltd.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   </>
 );
