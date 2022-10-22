@@ -43,7 +43,7 @@ const SmallFilmCard = ({
         setIsHovered(false);
       }}
     >
-      <div className="small-film-card__image">{(isHovered === true ? videoTag : imgTag)}</div>
+      <div className="small-film-card__image">{(isHovered ? videoTag : imgTag)}</div>
       <h3 className="small-film-card__title">
         <Link to={AppRoute.Film} className="small-film-card__link">
           {films[filmNumber].filmName}

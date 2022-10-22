@@ -1,5 +1,5 @@
 import { FilmInformation } from '../../types/filmInformation';
-import { RenderingFilmQuantity } from '../../types/renderingFilmQuantity';
+import { ItemsPerPage } from '../../types/itemsPerPage';
 import FilmList from '../../components/filmList/filmList';
 import UserBlock from '../../components/userBlock/userBlock';
 import Footer from '../../components/footer/footer';
@@ -7,12 +7,12 @@ import Logo from '../../components/logo/logo';
 
 type Props = {
   films: FilmInformation[],
-  renderingFilmQuantity: RenderingFilmQuantity[];
+  itemsPerPage: ItemsPerPage;
 };
 
 const MyList = ({
   films,
-  renderingFilmQuantity
+  itemsPerPage
 }: Props): JSX.Element => (
   <div className="user-page">
     <header className="page-header user-page__head">
@@ -29,7 +29,7 @@ const MyList = ({
 
       <FilmList
         films={films}
-        renderingFilmQuantity={renderingFilmQuantity[0].itemsPer}
+        renderingFilmQuantity={itemsPerPage.Page}
       />
     </section>
     <Footer />

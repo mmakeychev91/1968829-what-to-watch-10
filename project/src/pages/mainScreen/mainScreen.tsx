@@ -1,5 +1,5 @@
 import { FilmInformation } from '../../types/filmInformation';
-import { RenderingFilmQuantity } from '../../types/renderingFilmQuantity';
+import { ItemsPerPage } from '../../types/itemsPerPage';
 import FilmList from '../../components/filmList/filmList';
 import UserBlock from '../../components/userBlock/userBlock';
 import PlayButton from '../../components/playButton/playButton';
@@ -8,12 +8,12 @@ import Logo from '../../components/logo/logo';
 
 type Props = {
   films: FilmInformation[],
-  renderingFilmQuantity: RenderingFilmQuantity[];
+  itemsPerPage: ItemsPerPage;
 };
 
 const MainScreen = ({
   films,
-  renderingFilmQuantity
+  itemsPerPage
 }: Props): JSX.Element => (
   <>
     <section className="film-card">
@@ -119,7 +119,7 @@ const MainScreen = ({
 
         <FilmList
           films={films}
-          renderingFilmQuantity={renderingFilmQuantity[0].itemsPer}
+          renderingFilmQuantity={itemsPerPage.Page}
         />
 
         <div className="catalog__more">

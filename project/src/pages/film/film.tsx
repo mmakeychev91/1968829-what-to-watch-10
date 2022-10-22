@@ -3,7 +3,7 @@ import { Details } from '../../types/details';
 import { Overview } from '../../types/overview';
 import { Review } from '../../types/review';
 import FilmList from '../../components/filmList/filmList';
-import { RenderingFilmQuantity } from '../../types/renderingFilmQuantity';
+import { ItemsPerPage } from '../../types/itemsPerPage';
 import UserBlock from '../../components/userBlock/userBlock';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
@@ -15,10 +15,10 @@ type Props = {
   filmDetails: Details[];
   overviews: Overview[];
   reviews: Review[];
-  renderingFilmQuantity: RenderingFilmQuantity[];
+  itemsPerPage: ItemsPerPage;
 };
 
-const Film = ({ films, filmDetails, overviews, reviews, renderingFilmQuantity }: Props): JSX.Element => (
+const Film = ({ films, filmDetails, overviews, reviews, itemsPerPage }: Props): JSX.Element => (
   <>
     <section className="film-card film-card--full">
       <div className="film-card__hero">
@@ -132,7 +132,7 @@ const Film = ({ films, filmDetails, overviews, reviews, renderingFilmQuantity }:
         <h2 className="catalog__title">More like this</h2>
         <FilmList
           films={films}
-          renderingFilmQuantity={renderingFilmQuantity[1].itemsPer}
+          renderingFilmQuantity={itemsPerPage.Detail}
         />
       </section>
       <Footer/>

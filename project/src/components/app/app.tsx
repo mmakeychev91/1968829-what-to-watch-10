@@ -1,4 +1,4 @@
-import MainScreen from '../../pages/mainScreen/mainScreen';
+import MainScreen from 'pages/mainScreen/mainScreen';
 import AddReview from '../../pages/addReview/addReview';
 import ErrorPage from '../../pages/errorPage/errorPage';
 import Film from '../../pages/film/film';
@@ -12,14 +12,15 @@ import { Details } from '../../types/details';
 import { FilmInformation } from '../../types/filmInformation';
 import { Overview } from '../../types/overview';
 import { Review } from '../../types/review';
-import { RenderingFilmQuantity } from '../../types/renderingFilmQuantity';
+import { ItemsPerPage } from '../../types/itemsPerPage';
+import React from 'react';
 
 type Props = {
   filmDetails: Details[];
   films: FilmInformation[];
   overviews: Overview[];
   reviews: Review[];
-  renderingFilmQuantity: RenderingFilmQuantity[];
+  itemsPerPage: ItemsPerPage;
 };
 
 const App = ({
@@ -27,7 +28,7 @@ const App = ({
   films,
   overviews,
   reviews,
-  renderingFilmQuantity,
+  itemsPerPage,
 }: Props): JSX.Element => (
   <BrowserRouter>
     <Routes>
@@ -36,7 +37,7 @@ const App = ({
         element={
           <MainScreen
             films={films}
-            renderingFilmQuantity={renderingFilmQuantity}
+            itemsPerPage={itemsPerPage}
           />
         }
       />
@@ -47,7 +48,7 @@ const App = ({
           <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
             <MyList
               films={films}
-              renderingFilmQuantity={renderingFilmQuantity}
+              itemsPerPage={itemsPerPage}
             />
           </PrivateRoute>
         }
@@ -58,7 +59,7 @@ const App = ({
           filmDetails={filmDetails}
           overviews={overviews}
           reviews={reviews}
-          renderingFilmQuantity={renderingFilmQuantity}
+          itemsPerPage={itemsPerPage}
         />
       }
       />

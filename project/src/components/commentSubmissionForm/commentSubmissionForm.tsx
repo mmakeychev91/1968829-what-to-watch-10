@@ -1,9 +1,8 @@
 import { useState } from 'react';
 
 const CommentSubmissionForm = (): JSX.Element => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [textDate, setTextDate] = useState('');
-  // eslint-disable-next-line no-console
-  console.log(textDate);
   return (
     <form action="#" className="add-review__form">
       <div className="rating">

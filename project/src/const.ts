@@ -1,16 +1,9 @@
-import { RenderingFilmQuantity } from './types/renderingFilmQuantity';
+import { ItemsPerPage } from './types/itemsPerPage';
 
-const ITEMS_PER_PAGE = 8;
-const ITEMS_PER_FILM_DETAIL = 4;
-
-export const renderingFilmQuantity: RenderingFilmQuantity[] = [
-  {
-    itemsPer: ITEMS_PER_PAGE,
-  },
-  {
-    itemsPer: ITEMS_PER_FILM_DETAIL,
-  }
-];
+export const ITEMS_PER_PAGE: ItemsPerPage = Object.freeze({
+  Page: 8,
+  Detail: 4,
+});
 
 export enum AppRoute {
   Main = '/',

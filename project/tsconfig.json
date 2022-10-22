@@ -6,6 +6,8 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": ".", /* This is where all your code is*/
+    "paths": {"app*": ["src/app*"]},
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,6 +23,9 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
