@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
 import PlayButton from '../../components/playButton/playButton';
 import Footer from '../../components/footer/footer';
+import React from 'react';
 
 type Props = {
   films: FilmInformation[];

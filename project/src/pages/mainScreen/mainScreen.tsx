@@ -5,6 +5,7 @@ import UserBlock from '../../components/userBlock/userBlock';
 import PlayButton from '../../components/playButton/playButton';
 import Footer from '../../components/footer/footer';
 import Logo from '../../components/logo/logo';
+import React from 'react';
 
 type Props = {
   films: FilmInformation[],
