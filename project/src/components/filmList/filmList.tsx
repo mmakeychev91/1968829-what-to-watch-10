@@ -1,6 +1,7 @@
 import SmallFilmCard from '../../components/smallFilmCard/smallFilmCard';
 import { v4 as uuidv4 } from 'uuid';
 import { FilmInformation } from '../../types/filmInformation';
+import React from 'react';
 
 type Props = {
   films: FilmInformation[],
@@ -11,13 +12,12 @@ const renderFilmCards = (
   filmCardAmountPerStep: number,
   films: FilmInformation[],
 ) => {
-  const filmCardsItems = [];
+  const filmCardsItems: Array<JSX.Element> = [];
   for (let i = 0; i < filmCardAmountPerStep; i++) {
     filmCardsItems.push(
       <SmallFilmCard
-        filmNumber={i}
         key={uuidv4()}
-        films={films}
+        film={films[i]}
       />
     );
   }

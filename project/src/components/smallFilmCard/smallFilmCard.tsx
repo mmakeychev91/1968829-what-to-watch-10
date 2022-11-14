@@ -1,53 +1,54 @@
 import { FilmInformation } from '../../types/filmInformation';
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
-import {AppRoute} from '../../const';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../const';
+import React from 'react';
+import VideoPlayer from '../../components/videoPlayer/videoPlayer';
 
 type Props = {
-  films: FilmInformation[];
-  filmNumber: number;
+  film: FilmInformation;
 };
 
-const SmallFilmCard = ({
-  films,
-  filmNumber,
-}: Props): JSX.Element => {
+const SmallFilmCard = ({ film }: Props): JSX.Element => {
   const [isHovered, setIsHovered] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [isFocusedLongEnough, setisFocusedLongEnougI] = useState(false);
+  useEffect(() => {
+    // run a delayed script that will check if the component is hovered for 5s than set `isFocusedLongEnough` to true
+    if (isHovered) {
+      const timeout = setTimeout(() => {
+        setisFocusedLongEnougI(true);
+      }, 1000); // 1 second
+
+      return () => clearTimeout(timeout);
+    } else {
+      setisFocusedLongEnougI(false);
+    }
+  }, [isHovered]);
+  const onPointerEnter = () => {
+    // mark component as hovered
+    setIsHovered(true);
+  };
+
+  const onPointerLeave = () => {
+    // reset the state to normal
+    setIsHovered(false);
+  };
   const imgTag = (
-    <img
-      src={films[filmNumber].PreviewCover}
-      alt={films[filmNumber].filmName}
-      width="280"
-      height="175"
-    />
-  );
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const videoTag = (
-    <video
-      src={films[filmNumber].video}
-      autoPlay
-      muted
-      width="280"
-      height="175"
-    >
-    </video>
+    <img src={film.PreviewCover} alt={film.filmName} width="280" height="175" />
   );
   return (
     <article
       className="small-film-card catalog__films-card"
-      onPointerEnter={() => {
-        setIsHovered(true);
-      }}
-      onPointerLeave={() => {
-        setIsHovered(false);
-      }}
+      onPointerEnter={onPointerEnter}
+      onPointerLeave={onPointerLeave}
     >
-      <div className="small-film-card__image">{(isHovered ? videoTag : imgTag)}</div>
+      <div className="small-film-card__image">
+        {isFocusedLongEnough ? <VideoPlayer filmSrc={film.video} /> : imgTag}
+      </div>
       <h3 className="small-film-card__title">
         <Link to={AppRoute.Film} className="small-film-card__link">
-          {films[filmNumber].filmName}
-        </ Link>
+          {film.filmName}
+        </Link>
       </h3>
     </article>
   );

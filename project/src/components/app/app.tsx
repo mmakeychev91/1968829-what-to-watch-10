@@ -1,4 +1,4 @@
-import MainScreen from 'pages/mainScreen/mainScreen';
+import MainScreen from '../../pages/mainScreen/mainScreen';
 import AddReview from '../../pages/addReview/addReview';
 import ErrorPage from '../../pages/errorPage/errorPage';
 import Film from '../../pages/film/film';
