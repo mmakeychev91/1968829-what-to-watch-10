@@ -6,26 +6,35 @@ import React from 'react';
 type Props = {
   films: FilmInformation[];
   renderingFilmQuantity: number;
+  genre: string;
+  id: string;
 };
 
-const renderFilmCards = (
+const renderSimilarFilmCards = (
   filmCardAmountPerStep: number,
-  films: FilmInformation[]
+  films: FilmInformation[],
+  genre: string,
+  id: string,
 ) => {
   const filmCardsItems: Array<JSX.Element> = [];
-  for (let i = 0; i < filmCardAmountPerStep; i++) {
-    filmCardsItems.push(<SmallFilmCard key={uuidv4()} film={films[i]} />);
+  for (let i = 0; i < films.length; i++) {
+    if (films[i].genre === genre && films[i].id !== id) {
+      filmCardsItems.push(<SmallFilmCard key={uuidv4()} film={films[i]} />);
+    }
   }
+  filmCardsItems.length = 4;
   return filmCardsItems;
 };
 
-const FilmList = ({
+const SimilarFilms = ({
   films,
   renderingFilmQuantity,
+  genre,
+  id,
 }: Props): JSX.Element => (
   <div className="catalog__films-list">
-    {renderFilmCards(renderingFilmQuantity, films)}
+    {renderSimilarFilmCards(renderingFilmQuantity, films, genre, id)}
   </div>
 );
 
-export default FilmList;
+export default SimilarFilms;

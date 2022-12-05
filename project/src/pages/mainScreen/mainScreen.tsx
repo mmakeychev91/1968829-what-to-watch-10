@@ -8,14 +8,11 @@ import Logo from '../../components/logo/logo';
 import React from 'react';
 
 type Props = {
-  films: FilmInformation[],
+  films: FilmInformation[];
   itemsPerPage: ItemsPerPage;
 };
 
-const MainScreen = ({
-  films,
-  itemsPerPage
-}: Props): JSX.Element => (
+const MainScreen = ({ films, itemsPerPage }: Props): JSX.Element => (
   <>
     <section className="film-card">
       <div className="film-card__bg">
@@ -48,7 +45,7 @@ const MainScreen = ({
             </p>
 
             <div className="film-card__buttons">
-              <PlayButton/>
+              <PlayButton />
               <button className="btn btn--list film-card__button" type="button">
                 <svg viewBox="0 0 19 20" width="19" height="20">
                   <use xlinkHref="#add"></use>
@@ -118,11 +115,7 @@ const MainScreen = ({
           </li>
         </ul>
 
-        <FilmList
-          films={films}
-          renderingFilmQuantity={itemsPerPage.Page}
-        />
-
+        <FilmList films={films} renderingFilmQuantity={itemsPerPage.Page} />
         <div className="catalog__more">
           <button className="catalog__button" type="button">
             Show more
