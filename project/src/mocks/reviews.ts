@@ -1,62 +1,162 @@
 import { Review } from '../types/review';
 import { v4 as uuidv4 } from 'uuid';
 
-export const reviews: Review[] = [
-  {
-    text: 'Discerning travellers and Wes Anderson fans will luxuriate in the glorious Mittel-European kitsch of one of the director\'s funniest and most exquisitely designed films in years.',
-    rating: 8.9,
-    name: 'Kate Muir',
-    date: '2016-12-24',
-    id: uuidv4(),
-  },
-  {
-    text: 'afternoon empty merely dish fierce lying mixture pattern driven sister unknown twenty trick pie result careful look second chance wild tie bigger outer leave rush triangle lonely empty wild someone so simple hurried fifth examine refused purple made electricity command thy younger circus find written light daughter sale daughter poor interior bark television replace salt who before dawn gather race deep pen climate it come nearest shaking lake desert itself triangle individual walk mile few offer corner shape brain fast tightly attack replied dead slave saddle sit pencil job hundred could tone verb mind wood upon product century particularly angle',
-    rating: 7.2,
-    name: 'Matthew Lickona',
-    date: '2017-12-24',
-    id: uuidv4(),
-  },
-  {
-    text: 'large hand may whether everyone globe visitor shadow goes somewhere figure orange applied asleep instant help brown serious temperature doll burn captain listen chance program dog idea belt capital express principal lady number minerals exist surface throw riding broad gas lips because form this point very one belong mine hospital plates thought officer cry faster tea inside doubt find unit eye sun stopped until tropical four arrange weak interest story plates relationship pig trail syllable then article running blew uncle larger east metal wave whenever bit am add travel nation contrast stretch command directly entirely alone sit teacher continent chest',
-    rating: 4.2,
-    name: 'Milton Esparza',
-    date: '2018-12-24',
-    id: uuidv4(),
-  },
-  {
-    text: 'black wall general wet bring fall detail crack compass president will population same building folks those receive seed land are divide problem couple gasoline ride uncle date ordinary shown yes what chain edge energy carbon triangle supper gate careful tin tin feed enough check living home magic roll vote treated form sitting dawn party smallest simple move quick blood possible love riding getting great forgotten conversation certain anyone bridge leader consider never earlier pencil box hung are twenty actually stopped recent hole importance lovely chair short slip escape drink been exactly diameter nobody act picture film dream season run than',
-    rating: 3.2,
-    name: 'Esmay Wong',
-    date: '2019-12-24',
-    id: uuidv4(),
-  },
-  {
-    text: 'group baseball music rose earth yesterday wash because become common teeth jack evidence boat weather dollar grandfather entirely buffalo larger of smell machinery bottle giving myself never mixture putting lonely type dollar surprise breeze gate camera impossible body themselves at remain straw brick leaf pond run road figure game interest strange inside member swim hung heard engineer angle hat develop else pay greater dance drew green food team eat west feature led leg studying condition experiment dry capital sick writing experiment use might lucky no church country known everything win arrow mountain energy college minerals limited why exchange possible kitchen',
-    rating: 8.2,
-    name: 'Maariyah Pugh',
-    date: '2020-12-24',
-    id: uuidv4(),
-  },
-  {
-    text: 'running able spin spring weight saw bag plastic arrive kept new herd weak plain box outer education score metal generally understanding include chosen stand sink hearing changing shall lamp happened variety picture bill five diameter notice never themselves anywhere basis spoken ring into mind saddle ask once separate empty orange describe as grow habit seven fill been spread plan dig period floating clearly draw further judge pipe detail corn ready labor hide either evidence weigh zipper rocky experiment solve situation useful baseball breathing income wonder cry factory tomorrow shut taught hay harder factory related cabin paid missing myself star mouse',
-    rating: 7.9,
-    name: 'Fionn Simpson',
-    date: '2021-12-24',
-    id: uuidv4(),
-  },
-  {
-    text: 'method apartment make lovely compare drive discovery owner stopped happily stop least shape properly palace castle meat upward start claws clothes sets but rocky stared sense account written baseball copy bee paper fell customs everyone orange pencil pictured office by human fighting describe apartment additional cotton taught water split copper actually master between actual meal shop wealth shoe slave smaller pony keep able press hidden therefore screen become arrow face weak raise brick football hay poem steep broad joy private outline jungle stretch shoot butter sheet suddenly extra studied wonder bean bottom active burst pen locate plan offer stick cream',
-    rating: 7.4,
-    name: 'Laila Baldwin',
-    date: '2022-12-24',
-    id: uuidv4(),
-  },
-  {
-    text: 'to rich process forth hospital travel suppose protection vegetable age birds behind screen seven twenty horn realize away softly stomach salmon center knowledge tropical belong mysterious think snake worried slope vowel eaten pine chamber art particular fog right tropical ring chair month arrange finish cell energy are belong character little flow man prove fell shaking medicine finally struggle colony labor slide use gently worry out bell agree shells fuel musical join depth ask plenty selection pot myself white zoo line tongue variety pay any by point paragraph blood making white return spider bus cold giving gas characteristic season brought chicken',
-    rating: 1.2,
-    name: 'Tara Aguirre',
-    date: '2022-12-13',
-    id: uuidv4(),
-  },
+export const reviews: Array<Array<Review>> = [
+  [
+    {
+      text: 'Когда поднимают вопрос о лучшем фильме Леонида Гайдая, то большинство голосов обычно отдают «Бриллиантовой руке». Не оспаривая всех плюсов этого фильма, свой личный выбор я всё-таки останавливаю на «Иване Васильевиче». Чем это обусловлено? Тем, что помимо комедии это ещё и фантастика – жанр, которому в СССР уделяли унизительно мало внимания. ',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'В 1973 году, как говорится, сошлись все звёзды: Гайдай, которого не без оснований можно назвать самым прогрессивным советским режиссёром, взялся не просто за фантастику, а за произведение такого проблемного в те годы автора как Булгаков. С пьесой «Иван Васильевич» я тоже знаком, и она находит у меня исключительно положительный отклик. В нескольких моментах режиссёр отступает от первоисточника, и это весьма интересно, поскольку Булгаков между делом освещает проблему коммунальных квартир и скучных радиоэфиров. Гайдай эти темы не просто опускает, а показывает с лучшей стороны, перенося действие в 1970-е гг, но зато взамен предлагает уморительное зрелище с обыгрыванием и высмеиванием нового общества, а также пасхалку в виде Шурика, который уже выступал главным героем в фильмах «Операция Ы» и «Кавказская пленница».',
+      rating: 7.2,
+      name: 'Matthew Lickona',
+      date: '2017-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Некоторые фразы из «Ивана Васильевича» превратились в афоризмы. «Да ты ведьма!», «Я занят, позвоните попозже!», «На мне узоров нет и цветы не растут» – если вы хоть раз их где-нибудь слышали, то всё это влияние фильма, в котором есть машина времени, царь Иван Грозный, неуловимый советский вор и въедливый советский управдом, олицетворяющий все порядки, которые хоть и в ослабленном виде, но всё ещё царили в Советском Союзе. Для Юрия Яковлева роли Бунши и Ивана Грозного стали, пожалуй, наиболее заметными за всю карьеру. Соперничать с ними может, разве что, Ипполит из будущей «Иронии судьбы». Кто из персонажей-двойников получился более колоритным – сказать трудно. Бунша – трусоватый буквоед-бюрократ, а Иван Грозный, оправдывая своё прозвище, внушает почтение и трепет, хотя его характер и проходит через ломку в реалиях XX века. К слову, «Иван Васильевич меняет профессию» – это первый советский фильм, в котором персонаж-монарх не выставляется в отрицательном свете. Да, комедийные цари появлялись и раньше, но именно здесь царь вызывает добрый, неязвительный смех. В отличие от Шпака – не такого уж и простого советского человека, который не упускает возможности обернуть чрезвычайное происшествие себе на пользу. Лучше, чем Владимир Этуш, сыграть Шпака не смог бы никто, потому что только Этуш сохранял определённую привлекательность даже с хитрым взглядом в кадре.',
+      rating: 4.2,
+      name: 'Milton Esparza',
+      date: '2018-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Шурик, которого вновь играет Александр Демьяненко, по сюжету достигает новых жизненных высот, изобретая фантастическое устройство и вступая в брак с красавицей Зиной в исполнении Натальи Селезнёвой. Как человек, которому повезло и в реальной жизни общаться с такими женщинами как Зина, я ощущаю себя счастливчиком. Обладающие тягой к свободе (в том числе от супружеских уз), такие мадам и мадемуазели как Зина составляют незабываемую, приятную компанию. Ульяна Бунша – другой пример супруги, которая всем довольна и не лишена мании величия из-за своего статуса. Играющая её Наталья Крачковская – одна из наиболее постоянных актрис в фильмах Гайдая.',
+      rating: 3.2,
+      name: 'Esmay Wong',
+      date: '2019-12-24',
+      id: uuidv4(),
+    },
+  ],
+  [
+    {
+      text: 'Именно этот фильм чаще всего оказывается в подборке лучших за всю историю кинематографа вот уже далеко не первый год. В чём же причина? А причина проста: ничто не представляет для человека такой ценности как надежда. Всегда, при любой неприятности, когда все возможные союзники оказываются бессильны, с человеком остаётся только надежда. Энди (Тим Роббинс), которому не повезло оказаться в суровой тюрьме, понимает это особенно хорошо.',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Сюжет фильма не может не вызывать сопереживания. Оказавшись на самом дне, лишившись всего, что доставляло ему радость, Энди мог бы опустить руки и сдаться. Кругом стены и люди, которые хуже зверей. Но в любой жизненный момент у человека есть выбор, и Энди выбирает надежду. По крупице, шаг за шагом, иногда быстрее, иногда медленнее, но наш герой идёт к своей цели, не собираясь страдать просто так. Поскольку честь и достоинство персонажа ничем не испачканы, зрители сочувствуют Энди, равно как и его другу Реду (Морган Фриман). Обстановка, из которой оба пытаются выбраться, напоминает тяжёлые времена Второй мировой войны, тем более что отрицательные персонажи носят форму, похожую на нацистскую.',
+      rating: 7.2,
+      name: 'Matthew Lickona',
+      date: '2017-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Поражают и приятно удивляют расчётливость Энди, которую он умудрился сохранить в себе вопреки всем недружелюбным факторам. Не клюнуть на приманку в виде хитрого начальника тюрьмы дорогого стоило… Зрители постоянно буду наблюдать в кадре ночь или грозу – это излюбленный приём показать, как много в жизни персонажей трудностей. Но местами намёками, местами открытым закадровым текстом автор доносит до зрителей, что будущее может быть и не таким мрачным. Посыл «никогда не поздно начать что-то заново» найдёт отклик у каждого. Самая ценная мораль, которая усваивается из этого фильма – иногда бывает так, что надежда сбывается, когда её уже не ждут. А это значит, что к хорошему, как и к плохому, надо быть готовым.',
+      rating: 4.2,
+      name: 'Milton Esparza',
+      date: '2018-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Кажется, «Побег из Шоушенка» закрепил за Морганом Фриманом амплуа душевного и мудрого персонажа, поскольку более поздние роли актёра в таких фильмах как «Столкновение с бездной» и «Малышка на миллион» выглядят более «зрелыми» версиями Реда. Сейчас в это сложно поверить, но в год премьеры «Побег из Шоушенка» едва ли не провалился в прокате. И это самый ярки пример фильма, который, не став кассовым, приобрёл всеобщее признание.',
+      rating: 8.2,
+      name: 'Maariyah Pugh',
+      date: '2020-12-24',
+      id: uuidv4(),
+    },
+  ],
+  [
+    {
+      text: '«Зеленую милю» я смотрела два раза: 10 лет назад и сейчас. Первый раз у меня было примерно такое впечатление, о котором говорят большинство зрителей. Я плакала над глубокой и грустной историей, которая надолго оставила след в душе, тем более, что я была подростком. ',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Несколько лет назад прочитала оригинальный роман Кинга и периодически думала, насколько хороша и точна экранизация (хотя сам фильм я уже успела подзабыть, некоторые моменты еще были живы в памяти).',
+      rating: 7.2,
+      name: 'Matthew Lickona',
+      date: '2017-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Сейчас же я решила освежить впечатления и пощекотать эмоции, но это парадоксальным образом не сработало. После взросления и прочтения книги фильм Дарабонта показался мне плоским, как блин, и даже немного не раскрывающим темы, на которые замахивается. Это довольно странно, учитывая, что фильм идет три часа, при этом являясь экранизацией не такой уж и большой книги.',
+      rating: 4.2,
+      name: 'Milton Esparza',
+      date: '2018-12-24',
+      id: uuidv4(),
+    },
+  ],
+  [
+    {
+      text: 'Хочу написать рецензию пожалуй про самый известный фильм Алексея Балабанова, а именно про Брата. Вообще это довольно интересный фильм, который полон социального подтекста и скрытого смысла. Плюс еще одной сильной стороной фильма является невероятная атмосфера Петербурга, которая показывает город желтым, темным и одиноким. История фильма рассказывает нам о жизни Данилы Багрова, который только вернулся с Чеченской войны, где он якобы был писарем. Данила в своей жизни кроме войны ничего не видел, поэтому мать предлагает ему поехать к брату в Петербург. Брат же работает довольно известным в городе киллером, а Данила просто вливается в его бизнес. Такой сюжет у фильма Брат.',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'По сути он состоит из эпизодов, где каждый эпизод рассказывает историю. Кончается эпизод затемнением экрана. В фильме довольно интересные второстепенные персонажи. Тот же немец или тусовщица Кэт. Еще довольно интересно как режиссер вкрапил в фильм песни Наутилусов, оправдывая это тем, что Данила является их большим фанатом. Социальный же подтекст фильма говорит о потерянном поколении парней из Чеченской войны, о развале страны, о силе города, которая все высасывает из человека. И о том, что человек того времени не видит ценностей кроме денег. В общем, фильм к просмотру рекомендую.',
+      rating: 7.2,
+      name: 'Matthew Lickona',
+      date: '2017-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Данный фильм в своё время наделал много шума, став в итоге в России культовым. Важную роль в этом сыграли актёрская игра, злободневные моменты, а также переданная атмосфера самих девяностых годов.',
+      rating: 4.2,
+      name: 'Milton Esparza',
+      date: '2018-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'В главном герое данного фильма отобразились все чаяния тогдашнего населения страны («быть крутым», «вершить суд», «наказывать негодяев», «не бросать своих» и так далее). Однако так ли уж хорош этот персонаж на самом деле?',
+      rating: 3.2,
+      name: 'Esmay Wong',
+      date: '2019-12-24',
+      id: uuidv4(),
+    },
+  ],
+  [
+    {
+      text: 'Баскетбол один из самых популярных видов спорта и один из наиболее широко представленных в мировом кинематографе. Причем специфика этого вида спорта позволяет вставить его в любое жанровое направление. О баскетболе снимали комедии, драмы и даже фантастику. Но чаще всего за основу берут реальные события и судьбы. Так произошло и в данном случае. В очередной раз деятели кино смогли порадовать публику качественной спортивной драмой. Режиссер Томас Картер сумел найти правильный подход и заставил зрителя искренне переживать за героев данного фильма.',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+    {
+      text: 'Картина основана на реальных событиях из жизни американского тренера Кена Картера. В 1999 году в городе Ричмонде, штат Калифорния, тренер местной школьной команды по баскетболу запретил своим игрокам тренироваться и выходить на матчи чемпионата, в связи с их плохой учебой. Это беспрецедентное решение вызвало ожесточенные споры, получило как одобрение, так и критику. Причем большее недовольство проявляли сами родители игроков и школьное руководство. Вот такая необычная история, удивительная и трогательная. ',
+      rating: 7.2,
+      name: 'Matthew Lickona',
+      date: '2017-12-24',
+      id: uuidv4(),
+    },
+  ],
+  [
+    {
+      text: 'Фильм, который вызвал у меня яркие, но достаточно противоречивые впечатления. «Пианист» снят по реальным событиям, в основе картины лежит автобиография главного героя, польского пианиста Владислава Шпильмана. Жизнь Шпильмана меняется после того, как нацисты занимают Польшу – будучи евреем, он попадет в опалу нацистов, его переселяют в гетто, запрещают работать, а затем отправляют в лагерь. С точки зрения того, как показано то время и все те страшные вещи, которые происходили с еврейским народом, фильм безупречен. Я абсолютно поддерживаю все хвалебные отзывы и высокие оценки – они стопроцентно заслуженны. ',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+  ],
+  [
+    {
+      text: 'Фильм, который вызвал у меня яркие, но достаточно противоречивые впечатления. «Пианист» снят по реальным событиям, в основе картины лежит автобиография главного героя, польского пианиста Владислава Шпильмана. Жизнь Шпильмана меняется после того, как нацисты занимают Польшу – будучи евреем, он попадет в опалу нацистов, его переселяют в гетто, запрещают работать, а затем отправляют в лагерь. С точки зрения того, как показано то время и все те страшные вещи, которые происходили с еврейским народом, фильм безупречен. Я абсолютно поддерживаю все хвалебные отзывы и высокие оценки – они стопроцентно заслуженны. ',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+  ],
+  [
+    {
+      text: 'В очередной угрюмый и ковидный день я решил обратиться к киноленте, которая покорила меня в 2009 году до глубины души. Однажды осенним тоскливым днем я решил посмотреть расхайпленныую киноленту с Ричардом Гиром про верного пса, который после смерти своего хозяина не переставал верить в его чудесное возращение на протяжении 12 лет. Скажу честно, на тот момент мне показалось, что картина про лохматого завсегдатого, хочу отметить, очень лампового и уютного железнодорожного вокзала не сможет стать чем-то, что войдет в историю. Как же я ошибался, перед мной прозвучала ода искренней дружбы, любви и преданности -чувствам, которые никогда не сбавят в цене, чувствам которым некоторым людям даже не свойственны. Но один посыл я в силу совсем не зрелого возраста все же упустил. Хатико-это история о скоротечности счастья, трогательная сказка о его неминуемом конце: славные дни обязательно закончатся, но не вздумай опускать руки ведь ты не знаешь, когда начнутся новые-говорит нам режиссер. Так и поступил профессор Паркер(герой Ричарда Гира) не утративший веру в добро после смерти сына, ведь он нашел себе маленького ангела-хранителя в виде маленько шенка акита-ину. Верить в лучшее не переставали несчастные и одинокие работники вокзала, которые стали свидетелями настоящего чуда сплотившего их вместе. Дочь главного героя, потерявшая младшего брата и встретившего парня своей мечты. Подобно бешеному псу судьба рано или поздно вырвет все яркое из нашей жизни, но что если потом она подобно милому щенку принесет мягки зеленый мячик? Сохраняйте человечность- без нее мир погибнет!Из дополнительных плюсов: сеттинг. Если бы действие фильм проходило не в пригороде, фильм просто бы разлетелся на части. Маленький областной городок подобен хронологической книге, в которой каждая улица-это отдельная страница рассказывающая свою маленькую, личную историю.',
+      rating: 8.9,
+      name: 'Kate Muir',
+      date: '2016-12-24',
+      id: uuidv4(),
+    },
+  ],
 
 ];

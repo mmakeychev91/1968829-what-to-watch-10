@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Details } from '../../types/details';
 import { Overview } from '../../types/overview';
@@ -7,8 +6,8 @@ import { useState } from 'react';
 import TabsContent from '../tabsContent/tabsContent';
 
 type Props = {
-  filmDetails: Details[];
-  overviews: Overview[];
+  filmDetails: Details;
+  overviews: Overview;
   reviews: Review[];
 };
 

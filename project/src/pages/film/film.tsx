@@ -12,16 +12,19 @@ import React from 'react';
 import Logo from '../../components/logo/logo';
 import Tabs from '../../components/tabs/tabs';
 import SimilarFilms from '../../components/similarFilms/similarFilms';
+import { ITEMS_PER_PAGE } from './../../const';
 
 type Props = {
   films: FilmInformation[];
-  filmDetails: Details[];
-  overviews: Overview[];
+  film: FilmInformation;
+  filmDetails: Details;
+  overviews: Overview;
   reviews: Review[];
   itemsPerPage: ItemsPerPage;
 };
 
 const Film = ({
+  film,
   films,
   filmDetails,
   overviews,
@@ -32,7 +35,7 @@ const Film = ({
     <section className="film-card film-card--full">
       <div className="film-card__hero">
         <div className="film-card__bg">
-          <img src={films[3].bigPoster} alt={films[3].filmName} />
+          <img src={film.bigPoster} alt={film.filmName} />
         </div>
 
         <h1 className="visually-hidden">WTW</h1>
@@ -44,10 +47,10 @@ const Film = ({
 
         <div className="film-card__wrap">
           <div className="film-card__desc">
-            <h2 className="film-card__title">{films[3].filmName}</h2>
+            <h2 className="film-card__title">{film.filmName}</h2>
             <p className="film-card__meta">
-              <span className="film-card__genre">{films[3].genre}</span>
-              <span className="film-card__year">{films[3].releaseDate}</span>
+              <span className="film-card__genre">{film.genre}</span>
+              <span className="film-card__year">{film.releaseDate}</span>
             </p>
 
             <div className="film-card__buttons">
@@ -71,7 +74,7 @@ const Film = ({
         <div className="film-card__info">
           <div className="film-card__poster film-card__poster--big">
             <img
-              src={films[3].MovieСover}
+              src={film.MovieСover}
               alt="The Grand Budapest Hotel poster"
               width="218"
               height="327"
@@ -87,7 +90,7 @@ const Film = ({
     <div className="page-content">
       <section className="catalog catalog--like-this">
         <h2 className="catalog__title">More like this</h2>
-        <SimilarFilms id={films[3].id} genre={films[3].genre} films={films} renderingFilmQuantity={itemsPerPage.Detail} />
+        <SimilarFilms id={film.id} genre={film.genre} films={films} renderingFilmQuantity={ITEMS_PER_PAGE.Detail} />
       </section>
       <Footer />
     </div>

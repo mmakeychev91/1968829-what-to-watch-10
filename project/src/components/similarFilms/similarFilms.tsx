@@ -1,5 +1,5 @@
 import SmallFilmCard from '../../components/smallFilmCard/smallFilmCard';
-import { v4 as uuidv4 } from 'uuid';
+
 import { FilmInformation } from '../../types/filmInformation';
 import React from 'react';
 
@@ -16,13 +16,17 @@ const renderSimilarFilmCards = (
   genre: string,
   id: string,
 ) => {
+  const MAX_COUNT = filmCardAmountPerStep;
   const filmCardsItems: Array<JSX.Element> = [];
   for (let i = 0; i < films.length; i++) {
+    const element = <SmallFilmCard key={films[i].id} film={films[i]} />;
     if (films[i].genre === genre && films[i].id !== id) {
-      filmCardsItems.push(<SmallFilmCard key={uuidv4()} film={films[i]} />);
+      filmCardsItems.push(element);
+      if (filmCardsItems.length === MAX_COUNT) {
+        break;
+      }
     }
   }
-  filmCardsItems.length = 4;
   return filmCardsItems;
 };
 

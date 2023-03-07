@@ -48,7 +48,7 @@ export const films: FilmInformation[] = [
   },
   {
     bigPoster: 'https://avatars.mds.yandex.net/get-ott/224348/2a0000016127734a2f9243ba9809a701fa26/1344x756',
-    MovieСover: 'https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/3560b757-9b95-45ec-af8c-623972370f9d/300x450',
+    MovieСover: 'https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/b1055302-cb1c-4387-8817-f13ecf98034b/300x450',
     PreviewCover: 'https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/ce80934e6fa409c97f73f06a97a01a2a/600x380',
     filmName: 'Тренер Картер',
     genre: 'драма',
@@ -58,7 +58,7 @@ export const films: FilmInformation[] = [
 
   },
   {
-    bigPoster: 'https://avatars.mds.yandex.net/get-ott/200035/2a0000016127256d3d2a4f6bf76eac33c45f/1344x756',
+    bigPoster: 'https://avatars.mds.yandex.net/get-ott/239697/2a000001616cec2cfd84ab76771359c8402a/1344x756',
     MovieСover: 'https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/a477f092-e2ed-4a9d-a5f1-001438e88ab5/600x900',
     PreviewCover: 'https://avatars.mds.yandex.net/get-kino-vod-films-gallery/27707/8953bbc3a88a2860ed5a8093b4d25fbe/600x380',
     filmName: 'Собачье сердце',

@@ -8,15 +8,16 @@ import Logo from '../../components/logo/logo';
 import React from 'react';
 
 type Props = {
+  film: FilmInformation;
   films: FilmInformation[];
   itemsPerPage: ItemsPerPage;
 };
 
-const MainScreen = ({ films, itemsPerPage }: Props): JSX.Element => (
+const MainScreen = ({ films, itemsPerPage, film }: Props): JSX.Element => (
   <>
     <section className="film-card">
       <div className="film-card__bg">
-        <img src={films[1].bigPoster} alt={films[1].filmName} />
+        <img src={film.bigPoster} alt={film.filmName} />
       </div>
 
       <h1 className="visually-hidden">WTW</h1>
@@ -30,18 +31,18 @@ const MainScreen = ({ films, itemsPerPage }: Props): JSX.Element => (
         <div className="film-card__info">
           <div className="film-card__poster">
             <img
-              src={films[1].MovieСover}
-              alt={films[1].filmName}
+              src={film.MovieСover}
+              alt={film.filmName}
               width="218"
               height="327"
             />
           </div>
 
           <div className="film-card__desc">
-            <h2 className="film-card__title">{films[1].filmName}</h2>
+            <h2 className="film-card__title">{film.filmName}</h2>
             <p className="film-card__meta">
-              <span className="film-card__genre">{films[1].genre}</span>
-              <span className="film-card__year">{films[1].releaseDate}</span>
+              <span className="film-card__genre">{film.genre}</span>
+              <span className="film-card__year">{film.releaseDate}</span>
             </p>
 
             <div className="film-card__buttons">
