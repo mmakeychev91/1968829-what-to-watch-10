@@ -20,6 +20,7 @@ const renderSimilarFilmCards = (
   const filmCardsItems: Array<JSX.Element> = [];
   for (let i = 0; i < films.length; i++) {
     const element = <SmallFilmCard key={films[i].id} film={films[i]} />;
+
     if (films[i].genre === genre && films[i].id !== id) {
       filmCardsItems.push(element);
       if (filmCardsItems.length === MAX_COUNT) {

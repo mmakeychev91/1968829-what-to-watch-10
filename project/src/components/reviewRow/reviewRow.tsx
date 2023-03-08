@@ -11,16 +11,8 @@ const renderReviewList = (
   isCardEven: boolean,
 ) => {
   const reviewlistItems: Array<JSX.Element> = [];
-  for (let i = 0; i < reviews.length; i++) {
-    if (isCardEven) {
-      if (i % 2 === 0) {
-        reviewlistItems.push(<ReviewCard key={reviews[i].id} review={reviews[i]} />);
-      }
-    } else {
-      if (i % 2 !== 0) {
-        reviewlistItems.push(<ReviewCard key={reviews[i].id} review={reviews[i]} />);
-      }
-    }
+  for (let i = (isCardEven ? 0 : 1); i < reviews.length; i += 2) {
+    reviewlistItems.push(<ReviewCard key={reviews[i].id} review={reviews[i]} />);
   }
   return reviewlistItems;
 };

@@ -1,8 +1,8 @@
 export type FilmInformation = {
   bigPoster: string,
-  MovieСover: string,
-  PreviewCover: string,
-  filmName: string,
+  movieСover: string,
+  previewCover: string,
+  name: string,
   genre: string,
   releaseDate: number,
   video: string,

@@ -34,7 +34,7 @@ const SmallFilmCard = ({ film }: Props): JSX.Element => {
     setIsHovered(false);
   };
   const imgTag = (
-    <img src={film.PreviewCover} alt={film.filmName} width="280" height="175" />
+    <img src={film.previewCover} alt={film.name} width="280" height="175" />
   );
   return (
     <article
@@ -47,7 +47,7 @@ const SmallFilmCard = ({ film }: Props): JSX.Element => {
       </div>
       <h3 className="small-film-card__title">
         <Link to={AppRoute.Film} className="small-film-card__link">
-          {film.filmName}
+          {film.name}
         </Link>
       </h3>
     </article>

@@ -12,7 +12,7 @@ const AddReview = ({ film }: Props): JSX.Element => (
   <section className="film-card film-card--full">
     <div className="film-card__header">
       <div className="film-card__bg">
-        <img src={film.bigPoster} alt={film.filmName} />
+        <img src={film.bigPoster} alt={film.name} />
       </div>
 
       <h1 className="visually-hidden">WTW</h1>
@@ -24,7 +24,7 @@ const AddReview = ({ film }: Props): JSX.Element => (
           <ul className="breadcrumbs__list">
             <li className="breadcrumbs__item">
               <a href="film-page.html" className="breadcrumbs__link">
-                {film.filmName}
+                {film.name}
               </a>
             </li>
             <li className="breadcrumbs__item">
@@ -37,8 +37,8 @@ const AddReview = ({ film }: Props): JSX.Element => (
 
       <div className="film-card__poster film-card__poster--small">
         <img
-          src={film.MovieСover}
-          alt={film.filmName}
+          src={film.movieСover}
+          alt={film.name}
           width="218"
           height="327"
         />

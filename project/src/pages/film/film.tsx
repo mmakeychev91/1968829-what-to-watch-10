@@ -35,7 +35,7 @@ const Film = ({
     <section className="film-card film-card--full">
       <div className="film-card__hero">
         <div className="film-card__bg">
-          <img src={film.bigPoster} alt={film.filmName} />
+          <img src={film.bigPoster} alt={film.name} />
         </div>
 
         <h1 className="visually-hidden">WTW</h1>
@@ -47,7 +47,7 @@ const Film = ({
 
         <div className="film-card__wrap">
           <div className="film-card__desc">
-            <h2 className="film-card__title">{film.filmName}</h2>
+            <h2 className="film-card__title">{film.name}</h2>
             <p className="film-card__meta">
               <span className="film-card__genre">{film.genre}</span>
               <span className="film-card__year">{film.releaseDate}</span>
@@ -74,7 +74,7 @@ const Film = ({
         <div className="film-card__info">
           <div className="film-card__poster film-card__poster--big">
             <img
-              src={film.MovieСover}
+              src={film.movieСover}
               alt="The Grand Budapest Hotel poster"
               width="218"
               height="327"
