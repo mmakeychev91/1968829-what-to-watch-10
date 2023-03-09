@@ -1,17 +1,18 @@
+import React from 'react';
 import { FilmInformation } from '../../types/filmInformation';
 
 type Props = {
-  films: FilmInformation[];
+  film: FilmInformation;
 };
 
 const Player = ({
-  films
+  film
 }: Props): JSX.Element => (
   <div className="player">
     <video
-      src={films[0].video}
+      src={film.video}
       className="player__video"
-      poster={films[0].bigPoster}
+      poster={film.bigPoster}
     >
     </video>
 
@@ -42,7 +43,7 @@ const Player = ({
           </svg>
           <span>Play</span>
         </button>
-        <div className="player__name">{films[0].filmName}</div>
+        <div className="player__name">{film.name}</div>
 
         <button type="button" className="player__full-screen">
           <svg viewBox="0 0 27 27" width="27" height="27">

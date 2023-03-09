@@ -2,16 +2,17 @@ import { FilmInformation } from '../../types/filmInformation';
 import UserBlock from '../../components/userBlock/userBlock';
 import Logo from '../../components/logo/logo';
 import CommentSubmissionForm from '../../components/commentSubmissionForm/commentSubmissionForm';
+import React from 'react';
 
 type Props = {
-  films: FilmInformation[];
+  film: FilmInformation;
 };
 
-const AddReview = ({ films }: Props): JSX.Element => (
+const AddReview = ({ film }: Props): JSX.Element => (
   <section className="film-card film-card--full">
     <div className="film-card__header">
       <div className="film-card__bg">
-        <img src={films[0].MovieСover} alt={films[0].filmName} />
+        <img src={film.bigPoster} alt={film.name} />
       </div>
 
       <h1 className="visually-hidden">WTW</h1>
@@ -23,7 +24,7 @@ const AddReview = ({ films }: Props): JSX.Element => (
           <ul className="breadcrumbs__list">
             <li className="breadcrumbs__item">
               <a href="film-page.html" className="breadcrumbs__link">
-                {films[0].filmName}
+                {film.name}
               </a>
             </li>
             <li className="breadcrumbs__item">
@@ -36,8 +37,8 @@ const AddReview = ({ films }: Props): JSX.Element => (
 
       <div className="film-card__poster film-card__poster--small">
         <img
-          src={films[0].MovieСover}
-          alt={films[0].filmName}
+          src={film.movieСover}
+          alt={film.name}
           width="218"
           height="327"
         />
