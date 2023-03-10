@@ -10,7 +10,7 @@ export const films: FilmInformation[] = [
     genre: 'комедия',
     releaseDate: 1973,
     id: uuidv4(),
-    video: './video/000.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/ott-content/383628640-4ee79e6acd4895a38f5f6174a52d6604/ysign1=db2610fc2ebd94ec95f9571cf9eadeee9ca3eaaf67bd4eec457ae2c225ac2b48,abcID=1358,from=ott-kp,pfx,sfx,ts=6416fbab/master.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=2b22202fa7fc6750adccf813ad720daf3784acaaef39xWEBx0096x1678369719&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86%3B723199%2C0%2C54%3B723327%2C0%2C32&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773%2C723199%2C723327&force_m4s=1',
 
   },
   {
@@ -21,7 +21,7 @@ export const films: FilmInformation[] = [
     genre: 'драма',
     releaseDate: 1994,
     id: uuidv4(),
-    video: './video/001.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/ott-content/389274652-45de9a1665e77aab8a5a9ca7df509ffd/ysign1=a433e59018ed7efa31138dd636c6b11c04f5e492d821de3b4e304267fb477c4e,abcID=1358,from=ott-kp,pfx,sfx,ts=64184d2a/master.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=09c71582a395288f7c0491dff11354524d675c650cf4xWEBx0097x1678459339&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773&force_m4s=1',
 
   },
   {
@@ -32,7 +32,7 @@ export const films: FilmInformation[] = [
     genre: 'драма',
     releaseDate: 1999,
     id: uuidv4(),
-    video: './video/002.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/ott-content/7471748301240413267/hls/ysign1=7e8bf393622399d0334ee7a59d3db90e87f53bd3a5594a59adb9bd5d3f9627b9,abcID=1358,from=ott-kp,pfx,sfx,ts=64184d2d/master_sdr_sd_avc_aac.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=d0acfa30878e3dfc1512a78a4dd2538996186fc825efxWEBx0097x1678459474&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773&force_m4s=1',
 
   },
   {
@@ -43,7 +43,7 @@ export const films: FilmInformation[] = [
     genre: 'драма',
     releaseDate: 1997,
     id: uuidv4(),
-    video: './video/003.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/ott-content/392688765-4d2272ea60294c9abeb12991cea56e76/ysign1=f6a20e31012d0b96e9929d84dbb8d55719f60825d0b8ae32f755971a7d2d4df6,abcID=1358,from=ott-kp,pfx,sfx,ts=64184d8a/master.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=c731662717fec7ebf8271498110dca4c9dee64efe495xWEBx0097x1678459553&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773&force_m4s=1',
 
   },
   {
@@ -54,7 +54,7 @@ export const films: FilmInformation[] = [
     genre: 'драма',
     releaseDate: 2005,
     id: uuidv4(),
-    video: './video/005.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/ott-content/399897781-409f0c5834c7725b894a122f86e1ba55/ysign1=c4b89d4f20a96ad9f691bf413d26c55be081810364d9d07e09f41a548bccfd68,abcID=1358,from=ott-kp,pfx,sfx,ts=641850ff/master.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=05cb7603ef9415d18884c4da2fe87c1d8996b4e0aec2xWEBx0097x1678464459&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773&force_m4s=1',
 
   },
   {
@@ -65,7 +65,7 @@ export const films: FilmInformation[] = [
     genre: 'фантастика',
     releaseDate: 1988,
     id: uuidv4(),
-    video: './video/006.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/vod-content/49c46bf3f4d2fa21b21e697bec832ee1/10908459x1677514097x5fbaee3e-0f4f-477f-844a-8310bfaa0fdf/hls-v3/ysign1=b2bc2bb4c4a65c7c5921b71464b5ca54f26f7a2d6c8f6f5be0b45e7c76e3eef6,abcID=1358,from=ott-kp,pfx,sfx,ts=64183298/master_sdr_hd_avc_aac.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=1156cf5828374f47749e832bac5600d8a76ff571d440xWEBx0097x1678464534&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773&force_m4s=1',
 
   },
   {
@@ -76,7 +76,7 @@ export const films: FilmInformation[] = [
     genre: 'драма',
     releaseDate: 2002,
     id: uuidv4(),
-    video: './video/007.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/ott-content/390560419-4657b0b6d50d42f6bc1d30a6454df852/ysign1=ade34188783abb47d5645d5470d7ab02add57f1f8c32db5ae9262679050f41e6,abcID=1358,from=ott-kp,pfx,sfx,ts=64184d1b/master.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=0680f467a3fb77ae9852bb9fc333a083681e84d795f5xWEBx0097x1678464608&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773&force_m4s=1',
 
   },
   {
@@ -87,7 +87,7 @@ export const films: FilmInformation[] = [
     genre: 'семейный',
     releaseDate: 2008,
     id: uuidv4(),
-    video: './video/008.mp4',
+    video: 'https://strm.yandex.ru/vh-kp-converted/ott-content/389083183-42787364432bf8e49b0ec9cc98ef0ab6/ysign1=549052944be9d1d4370b7b3972ec01ab3f51a1d8b799d898eab367525634ad90,abcID=1358,from=ott-kp,pfx,sfx,ts=6418510c/master.m3u8?partner-id=139995&video-category-id=1014&imp-id=undefined&gzip=1&from=discovery&vsid=a90179f026e99ec0620a9db0620c34842971bff66b59xWEBx0097x1678464670&slots=436979%2C0%2C32%3B708477%2C0%2C3%3B715618%2C0%2C70%3B719026%2C0%2C16%3B722576%2C0%2C37%3B722773%2C0%2C86&testIds=436979%2C708477%2C715618%2C719026%2C722576%2C722773&force_m4s=1',
 
   },
 ];
