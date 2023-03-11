@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/1968829-what-to-watch-10/static/js/main.6b13a7db.js",
+    "main.js": "/1968829-what-to-watch-10/static/js/main.bf4cd188.js",
     "index.html": "/1968829-what-to-watch-10/index.html",
-    "main.6b13a7db.js.map": "/1968829-what-to-watch-10/static/js/main.6b13a7db.js.map"
+    "main.bf4cd188.js.map": "/1968829-what-to-watch-10/static/js/main.bf4cd188.js.map"
   },
   "entrypoints": [
-    "static/js/main.6b13a7db.js"
+    "static/js/main.bf4cd188.js"
   ]
 }
