@@ -40,7 +40,7 @@ const App = ({
       <Route
         path={AppRoute.MyList}
         element={
-          <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+          <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
             <MyList films={films} itemsPerPage={itemsPerPage} />
           </PrivateRoute>
         }
