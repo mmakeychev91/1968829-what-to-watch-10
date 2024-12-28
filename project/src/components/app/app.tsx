@@ -1,19 +1,19 @@
-import MainScreen from '../../pages/mainScreen/mainScreen';
-import AddReview from '../../pages/addReview/addReview';
-import ErrorPage from '../../pages/errorPage/errorPage';
-import Film from '../../pages/film/film';
-import MyList from '../../pages/myList/myList';
-import Player from '../../pages/player/player';
-import SignIn from '../../pages/signIn/signIn';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import { AppRoute, AuthorizationStatus } from '../../const';
-import PrivateRoute from '../private-route/private-route';
-import { Details } from '../../types/details';
-import { FilmInformation } from '../../types/filmInformation';
-import { Overview } from '../../types/overview';
-import { Review } from '../../types/review';
-import { ItemsPerPage } from '../../types/itemsPerPage';
-import React from 'react';
+import MainScreen from "../../pages/mainScreen/mainScreen";
+import AddReview from "../../pages/addReview/addReview";
+import ErrorPage from "../../pages/errorPage/errorPage";
+import Film from "../../pages/film/film";
+import MyList from "../../pages/MyList/myList";
+import Player from "../../pages/Player/player";
+import SignIn from "../../pages/signIn/signIn";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { AppRoute, AuthorizationStatus } from "../../const";
+import PrivateRoute from "../private-route/private-route";
+import { Details } from "../../types/details";
+import { FilmInformation } from "../../types/filmInformation";
+import { Overview } from "../../types/overview";
+import { Review } from "../../types/review";
+import { ItemsPerPage } from "../../types/itemsPerPage";
+import React from "react";
 
 type Props = {
   filmDetails: Details[];
@@ -34,7 +34,13 @@ const App = ({
     <Routes>
       <Route
         path={AppRoute.Main}
-        element={<MainScreen film={films[4]} films={films} itemsPerPage={itemsPerPage} />}
+        element={
+          <MainScreen
+            film={films[4]}
+            films={films}
+            itemsPerPage={itemsPerPage}
+          />
+        }
       />
       <Route path={AppRoute.SignIn} element={<SignIn />} />
       <Route
